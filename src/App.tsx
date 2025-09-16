@@ -63,12 +63,16 @@ function App() {
 
   return (
     <>
-      <MovieCard 
-      title="title"
-      director="director"
-      year={2010}
-      />
-
+      {
+        movies.map(m => (
+          <MovieCard
+          key={m.id}
+          title={m.title}
+          director={m.director}
+          year={m.year}
+          />
+        ))
+      }
     </>
 
   )

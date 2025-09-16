@@ -1,4 +1,4 @@
-
+import React from "react"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -12,7 +12,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 interface MovieCardProps {
-title: string,
+title: string
 director: string
 year: number | string
 }
