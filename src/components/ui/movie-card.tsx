@@ -12,9 +12,13 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 interface MovieCardProps {
+id: number
 title: string
 director: string
 year: number | string
+}
+interface MoreCardProps {
+  onDeleteClick: () => void;
 }
 export function MovieCard({title, director, year}: MovieCardProps) {
 
@@ -22,9 +26,9 @@ return(
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>
-          yup it's a movie
-        </CardDescription>
+        <CardContent className="gap-y-4">
+        <Button className="gap-y-4">Delete</Button>
+        </CardContent>
       </CardHeader>
       <CardContent>
         <span>
